@@ -1,0 +1,23 @@
+-- create json object of question
+-- start create html 
+-- add dumay data
+-- create style
+-- featch number of question from json
+-- show question count + question category
+-- show the number of bults depend on question count
+-- set the number for the right and wrong answer
+-- create count down timer
+-- featch the question from the json object
+-- show first question
+-- check  answer and hide question then show next one
+-- if timer end mark the question as wrong
+-- add plus on bult after answring the question
+-- if question finished show result
+
+
+ideas 
+
+-- many json object and choose language
+-- add many question and choose only ten randomally
+-- randomize answer
+-- 

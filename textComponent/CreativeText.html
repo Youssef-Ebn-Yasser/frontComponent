@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreativText</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .text-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #222;
+        }
+
+        .text {
+            font-size: 7em;
+            color: #444;
+        }
+
+        .t {
+            left: 0;
+            top: 0;
+            position: absolute;
+            font-weight: 600;
+            --shade: #333;
+            text-shadow: -1px 1px 0 var(--shade), -2px 2px 0 var(--shade),
+                -3px 4px 0 var(--shade),
+                -4px 6px 0 var(--shade),
+                -5px 8px 0 var(--shade),
+                -1px 1px 0 var(--shade),
+                -6px 12px 10px rgba(0, 0, 0,.753);
+                transition: 1.5s ease;
+            letter-spacing: 2;
+
+        }
+
+        .t1 {
+            position: relative;
+        }
+
+        .t2 {
+            --size: 100px;
+            clip-path: circle(var(--size) at 0 0);
+            color: #44c4ff;
+            --shade:#20a6e4;
+        }
+
+        .t3 {
+            --size: 100px;
+            clip-path: circle(var(--size) at 100% 0);
+            color: #00ff95;
+            --shade:#00b96c;
+
+        }
+
+        .t4 {
+            --size: 100px;
+            clip-path: circle(var(--size) at 50% 120%);
+            color: #ff00d4;
+            --shade:#a8008c;
+
+        }
+        .t:hover {
+            --size: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-body">
+        <div class="text">
+            <div class="t t1">Creative</div>
+            <div class="t t2">Creative</div>
+            <div class="t t3">Creative</div>
+            <div class="t t4">Creative</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
