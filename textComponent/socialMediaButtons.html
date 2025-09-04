@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>socialMediaButtons</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0 auto;
+        }
+
+        .sm-link {
+            margin: 0 15px;
+        }
+
+        .sm {
+            padding: 5px;
+            width: 1.5rem;
+            border-radius: 4px;
+            background-size: 100% 200%;
+            background-position: 0 20%;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: whitesmoke;
+            font-size: 1.5rem;
+            text-shadow: 4px 2px 4px rgba(0, 0, 0, .3);
+            box-shadow: 4px 2px 10px 0 rgba(50, 50, 50, .6);
+            transition: all .5s ease-in-out;
+        }
+
+        .sm:hover {
+            background-position: 0 100%;
+            text-shadow: 4px 2px 4px rgba(0, 0, 0, .7);
+        }
+
+        .facebook {
+            background-image: linear-gradient(darkgray, 50%, #55acee 50%);
+        }
+
+        .linkedin {
+            background-image: linear-gradient(darkgray, 50%, #3b5998 50%);
+        }
+
+        .google {
+            background-image: linear-gradient(darkgray, 50%, #dd4b39 50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="https://www.facebook.com" target="_blank" class="sm-link">
+            <div class="sm facebook">
+                <i class="bi bi-facebook fs-3"></i>
+            </div>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" class="sm-link">
+            <div class="sm linkedin">
+                <i class="bi bi-linkedin fs-3"></i>
+            </div>
+        </a>
+        <a href="https://www.google.com" target="_blank" class="sm-link">
+            <div class="sm google">
+                <i class="bi bi-google fs-3"></i>
+            </div>
+        </a>
+    </div>
+
+</body>
+
+</html>
