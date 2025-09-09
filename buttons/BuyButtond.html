@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font Awesome CDN -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+
+        <title>Buy Button</title>
+
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'poppins', sans-serif;
+                background-color: hsl(0, 0%, 98%);
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .cart-button {
+                position: relative;
+                width: 200px;
+                height: 62px;
+                background-color: hsl(250, 69%, 61%);
+                border-radius: 10px;
+                font-size: 16px;
+                font-weight: 500;
+                color: #fff;
+                cursor: pointer;
+                overflow: hidden;
+                transition: .3s ease-in-out;
+            }
+
+            .cart-button:hover {
+                background-color: hsl(250, 57%, 53%);
+            }
+
+            .cart-button:active {
+                transform: scale(.9);
+            }
+
+            .fa-shooping-cart {
+                position: absolute;
+                z-index: 2;
+                top: 50%;
+                left: -10%;
+                transform: translate(-50%,-50%);
+                font-size: 24px;
+            }
+
+            .fa-box {
+                position: absolute;
+                z-index: 3;
+                top: -20%;
+                left: 52%;
+                transform: translate(-50%,-50%);
+                font-size: 14px;
+            }
+
+            .cart-button span {
+                position: absolute;
+                z-index: 3;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }   
+
+            .added {
+                opacity: 0;
+            }
+
+            .cart-button.clicked .fa-shooping-cart {
+                animation: cart 1.5s ease-in-out forwards;
+            }
+            .cart-button.clicked .fa-box {
+                animation: box 1.5s ease-in-out forwards;
+            }
+
+            .cart-button.clicked .add-to-cart {
+                animation: txt1 1.5s ease-in-out forwards;
+            }
+            .cart-button.clicked .added {
+                animation: txt2 1.5s ease-in-out forwards;
+            }
+
+            @keyframes cart {
+                0% {
+                    left: -10px;
+                }
+
+                40%,60% {
+                    left: 50%;
+                }
+
+                100% {
+                    left: 110%;
+                }
+            }
+
+            @keyframes box {
+                0%,40% {
+                    top: -20px;
+                }
+
+                60% {
+                    top: 40%;
+                    left: 52%;
+                }
+
+                100% {
+                    top: 40%;
+                    left: 112%;
+                }
+            }
+
+            @keyframes txt1 {
+                0% {
+                    opacity: 1;
+                }
+
+                20%,100% {
+                    opacity: 0;
+                }
+            }
+
+                    @keyframes txt2 {
+                0% ,80% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <span class="cart-button">
+            <span class="add-to-cart">Add to cart</span>
+            <span class="added">Added</span>
+            <i class="fas fa-shooping-cart">cc</i>
+            <i class="fas fa-box">99</i>
+        </span>
+    </body>
+
+    <script>
+        const cartButton = document.querySelectorAll('.cart-button');
+        cartButton.forEach(btn=>{
+            btn.addEventListener('click',cartClick);
+        });
+
+        function cartClick(){
+            let button  = this;
+            button.classList.add('clicked')
+        }
+    </script>
+
+</html>
